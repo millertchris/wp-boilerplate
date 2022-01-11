@@ -1,7 +1,7 @@
 <?php
 	//======================================================================
 	// These are functions that are used throughout the theme’s template
-	// files to help make the code more readable, and to abstract some of 
+	// files to help make the code more readable, and to abstract some of
 	// the core WordPress logic out of template files.
 	//======================================================================
 
@@ -65,7 +65,7 @@
 	function get_table_of_contents($post_type) {
 		global $post;
 		$parent_id = $post->ID;
-		
+
 		if ($post->post_parent) {
 			$parent_id = $post->post_parent;
 		}
@@ -198,3 +198,22 @@
 		// Return a new format
 		return $newDate->format($new_format);
 	};
+
+	//======================================================================
+	// TRUNCATE A STRING TO A GIVEN LENGTH WITHOUT CUTTING MID-WORD
+	//======================================================================
+	function truncate($string, $length = 250, $append = "&hellip;") {
+	$string = trim($string);
+	if (strlen($string) > $length) {
+			$string = strip_tags($string);
+			$string = wordwrap($string, $length, "~!~", true);
+			$string = explode("~!~", $string, 2);
+			$string = rtrim($string[0]);
+	}
+
+	if (strlen($string) !== 0) {
+			return $string . $append;
+	} else {
+			return $string;
+	}
+}
