@@ -18,12 +18,16 @@ legend {
 	padding: 0;
 }
 
-label {
-	display: block;
-	font-weight: 600;
-	margin-bottom: 0;
-}
 
+
+label {
+    font-family: var(--base-font-family);
+    font-size: 14px;
+    color: #2b2b2b;
+    line-height: 16px;
+    font-weight: 400;
+  }
+ 
 
 
 #{$all-text-inputs} {
@@ -70,7 +74,8 @@ label {
 		}
 	}
 	&::placeholder {
-		color: tint(var(--color-1), 60%);
+		color: var(--color-10);
+		opacity: .15;
 	}
 }
 

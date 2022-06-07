@@ -1,13 +1,15 @@
 <?php get_header(); ?>
 
-	<?php if(acf_activated() && have_rows('blocks')) : ?>
+<?php the_content(); ?>
 
-		<?php while (acf_activated() && have_rows('blocks')) : the_row(); ?>
-			<?php $block_type = get_row_layout();?>
+<?php if (acf_activated() && have_rows('blocks')) : ?>
 
-			<?php include(locate_template('blocks/' . $block_type . '.php')); ?>
-		<?php endwhile; ?>
+	<?php while (acf_activated() && have_rows('blocks')) : the_row(); ?>
+		<?php $block_type = get_row_layout(); ?>
 
-	<?php endif; ?>
+		<?php include(locate_template('blocks/' . $block_type . '.php')); ?>
+	<?php endwhile; ?>
+
+<?php endif; ?>
 
 <?php get_footer(); ?>
