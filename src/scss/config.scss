@@ -1,0 +1,109 @@
+:root {
+	// Wrapper
+	--site-width: 1200px;
+
+	// Colors
+	--color-1: #363636;
+	--color-2: #056839;
+	--color-3: #fffef4;
+	--color-4: #f8f7ed;
+	--color-5: #efeee5;
+	--color-6: #f3f5e9;
+	--color-7: #3c3763;
+	--color-8: #e8f7ff;
+	--color-9: #eaeaea;
+	--color-10: #2b2b2b;
+	--color-11: rgba(5, 104, 57, 0.08);
+	--color-hover: #1597bb;
+	--color-active: #1597bb;
+	--color-error: #7b113a;
+	--color-success: #8fd6e1;
+
+	--body-color: #ffffff;
+
+	--link-color: var(--color-2);
+	--link-color-hover: var(--color-hover);
+
+	// Base Font
+	--base-font-family: "Roboto", sans-serif;
+	--base-font-color: var(--color-1);
+	--base-font-size: 20px;
+	--base-line-height: 1.4;
+	--base-font-weight: 400;
+
+	// Heading Font
+	--heading-font-family: var(--base-font-family);
+	--heading-line-height: 1;
+	--heading-font-weight: 500;
+
+	// Base Border
+	--base-border-color: rgba(172, 172, 172, 0.5);
+	--base-border-radius: 0px;
+	--base-border: 0.5px solid var(--btn-border-color);
+
+	// Button Variables
+	--btn-text-color: var(--color-2);
+	--btn-background: #e8ecdf;
+	--btn-text-color-hover: var(--color-5);
+	--btn-background-hover: var(--color-2);
+	--btn-line-height: var(--base-line-height);
+	--btn-font-weight: 600;
+	--btn-padding-vertical: 10px;
+	--btn-padding-horizontal: 20px;
+	--btn-padding-top: var(--btn-padding-vertical);
+	--btn-padding-bottom: var(--btn-padding-vertical);
+	--btn-padding-right: var(--btn-padding-horizontal);
+	--btn-padding-left: var(--btn-padding-horizontal);
+	--btn-border-width: 2px;
+	--btn-border-style: solid;
+	--btn-border-color: var(--color-2);
+	--btn-border-radius: 2px;
+	--btn-hover-border-color: var(--color-1);
+	--btn-duration: var(--base-duration);
+	--btn-timing: var(--base-timing);
+	--btn-box-shadow-h-offset: 1px;
+	--btn-box-shadow-v-offset: 1px;
+	--btn-box-shadow-blur: 1px;
+	--btn-box-shadow-spread: 1px;
+	--btn-box-shadow-color: var(--color-1);
+
+	// Input Variables
+	--input-text-color: var(--color-1);
+	--input-background: #fff;
+
+	--input-padding-top: 1em;
+	--input-padding-bottom: 1em;
+	--input-padding-left: 1em;
+	--input-padding-right: 1em;
+
+	--input-margin-top: 0;
+	--input-margin-bottom: 1.5em;
+	--input-margin-left: 0;
+	--input-margin-right: 0;
+
+	--input-box-shadow-h-offset: 0px;
+	--input-box-shadow-v-offset: 0px;
+	--input-box-shadow-blur: 1px;
+	--input-box-shadow-spread: 1px;
+	--input-box-shadow-color: #ffffff;
+
+	--focus-outline-style: solid;
+	--focus-outline-color: var(--color-active);
+	--focus-outline-width: 4px;
+	--focus-outline-offset: 0;
+
+	// Base Transition
+	--base-duration: 300ms;
+	--base-timing: ease-in-out;
+}
+
+// Buttons
+$all-buttons: ".btn, .block [type='button'], .block [type='reset'], .block [type='submit']";
+$all-buttons-active: ".block button:active, .block [type='button']:active, .block [type='reset']:active, .block [type='submit']:active";
+$all-buttons-focus: ".block button:focus, .block [type='button']:focus, .block [type='reset']:focus, .block [type='submit']:focus";
+$all-buttons-hover: ".block button:hover, .block [type='button']:hover, .block [type='reset']:hover, .block [type='submit']:hover";
+$all-text-inputs: ".block [type='color'], .block [type='date'], .block [type='datetime'], .block [type='datetime-local'], .block [type='email'], .block [type='month'], .block [type='number'], .block [type='password'], .block [type='search'], .block [type='tel'], .block [type='text'], .block [type='time'], .block [type='url'], .block [type='week'], input:not([type]), textarea";
+$all-text-inputs-active: ".block [type='color']:active, .block [type='date']:active, .block [type='datetime']:active, .block [type='datetime-local']:active, .block [type='email']:active, .block [type='month']:active, .block [type='number']:active, .block [type='password']:active, .block [type='search']:active, .block [type='tel']:active, .block [type='text']:active, .block [type='time']:active, .block [type='url']:active, .block [type='week']:active, .block input:not([type]):active, .block textarea:active";
+$all-text-inputs-focus: ".block [type='color']:focus, .block [type='date']:focus, .block [type='datetime']:focus, .block [type='datetime-local']:focus, .block [type='email']:focus, .block [type='month']:focus, .block [type='number']:focus, .block [type='password']:focus, .block [type='search']:focus, .block [type='tel']:focus, .block [type='text']:focus, .block [type='time']:focus, .block [type='url']:focus, .block [type='week']:focus, .block input:not([type]):focus, .block textarea:focus";
+$all-text-inputs-hover: ".block [type='color']:hover, .block [type='date']:hover, .block [type='datetime']:hover, .block [type='datetime-local']:hover, .block [type='email']:hover, .block [type='month']:hover, .block [type='number']:hover, .block [type='password']:hover, .block [type='search']:hover, .block [type='tel']:hover, .block [type='text']:hover, .block [type='time']:hover, .block [type='url']:hover, .block [type='week']:hover, .block input:not([type]):hover, .block textarea:hover";
+$all-text-inputs-invalid: ".block [type='color']:invalid, .block [type='date']:invalid, .block [type='datetime']:invalid, .block [type='datetime-local']:invalid, .block [type='email']:invalid, .block [type='month']:invalid, .block [type='number']:invalid, .block [type='password']:invalid, .block [type='search']:invalid, .block [type='tel']:invalid, .block [type='text']:invalid, .block [type='time']:invalid, .block [type='url']:invalid, .block [type='week']:invalid, .block input:not([type]):invalid, .block textarea:invalid";
