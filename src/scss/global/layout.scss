@@ -38,24 +38,3 @@
 .text-align-right {
 	text-align: right;
 }
-
-.block {
-	&.content-left {
-		.row {
-			flex-direction: row;
-		}
-	}
-	&.content-right {
-		.row {
-			flex-direction: row-reverse;
-		}
-	}
-	&.content-left,
-	&.content-right {
-		.row {
-			@media screen and (max-width: 960px) {
-				flex-direction: column;
-			}
-		}
-	}
-}
