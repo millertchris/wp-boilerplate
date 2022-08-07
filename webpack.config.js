@@ -33,9 +33,9 @@ module.exports = {
 		publicPath: "",
 	},
 	devtool: "inline-source-map",
-	devServer: {
-		contentBase: "./dist",
-	},
+	// devServer: {
+	// 	contentBase: "./dist",
+	// },
 	module: {
 		rules: [
 			{

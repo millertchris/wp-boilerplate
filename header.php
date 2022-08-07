@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
+
 <head>
-<?php if (is_search()) { ?>
-    <meta name="robots" content="noindex, nofollow">
-<?php } ?>
+    <?php if (is_search()) { ?>
+        <meta name="robots" content="noindex, nofollow">
+    <?php } ?>
 
-<meta charset="UTF-8">
-<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<?php wp_head(); ?>
+    <?php wp_head(); ?>
 
 </head>
 
@@ -26,11 +27,11 @@
                 <div class="col">
                     <nav id="main-menu">
                         <?php
-                            $args = array(
-                                'theme_location' 	=> 'main-menu',
-                                'container' 		=> 'ul',
-                                'items_wrap' 		=> '%3$s'
-                            );
+                        $args = array(
+                            'theme_location'     => 'main-menu',
+                            'container'         => 'ul',
+                            'items_wrap'         => '%3$s'
+                        );
                         ?>
                         <?php wp_nav_menu($args); ?>
                     </nav>
@@ -39,4 +40,4 @@
         </div>
     </header>
 
-<main id="main">
+    <main id="main">
