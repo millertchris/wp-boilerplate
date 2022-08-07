@@ -8,7 +8,6 @@ class acf_settings {
 
         // Check function exists.
         if (function_exists('acf_register_block_type')) {
-
             acf_register_block_type(array(
                 'name'              => 'hero',
                 'title'             => __('Hero'),

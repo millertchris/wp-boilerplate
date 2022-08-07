@@ -6,7 +6,7 @@ add_action('wp_enqueue_scripts', 'theme_settings::resources');
 add_action('after_setup_theme', 'theme_settings::setup_theme_slug');
 add_action('after_setup_theme', 'theme_settings::register_nav_menus', 0);
 add_action('enqueue_block_editor_assets', 'admin_settings::gutenberg_styles');
-// add_action('init', 'cpt_settings::product', 0);
+add_action('init', 'cpt_settings::event', 0);
 
 //======================================================================
 // WORDPRESS FILTERS
@@ -36,8 +36,3 @@ add_filter('acf/settings/save_json', 'acf_settings::json_save_folder');
 add_filter('acf/settings/load_json', 'acf_settings::json_load_folder');
 add_filter('block_categories_all', 'acf_settings::block_categories', 10, 2);
 acf_settings::add_option_page();
-
-
-
-
-// add_theme_support('editor-styles');

@@ -6,7 +6,7 @@ var path = require("path");
 const jsPath = "./src/js";
 const cssPath = "./src/scss";
 const outputPath = "dist";
-const localDomain = "http://wp-boilerplate.local";
+const localDomain = "http://prolific.local";
 const entryPoints = {
 	// 'app' is the output name, people commonly use 'bundle'
 	// you can have more than 1 entry point
@@ -20,6 +20,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, outputPath),
 		filename: "[name].js",
+		publicPath: "",
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
@@ -66,8 +67,12 @@ module.exports = {
 				],
 			},
 			{
-				test: /\.(jpg|jpeg|png|gif|woff|woff2|eot|ttf|svg)$/i,
-				use: "url-loader?limit=1024",
+				test: /\.(png|svg|jpg|jpeg|gif)$/i,
+				type: "asset/resource",
+			},
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/i,
+				type: "asset/resource",
 			},
 		],
 	},

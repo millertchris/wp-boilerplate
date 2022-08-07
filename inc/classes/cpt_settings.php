@@ -3,13 +3,13 @@
 class cpt_settings {
     //======================================================================
     // CREATE CUSTOM POST TYPE
-    //======================================================================
-    static function product() {
+    //======================================================================    
+    static function event() {
         $labels = array(
-            'name'                  => _x('Products', 'Product General Name', 'text_domain'),
-            'singular_name'         => _x('Product', 'Product Singular Name', 'text_domain'),
-            'menu_name'             => __('Products', 'text_domain'),
-            'name_admin_bar'        => __('Product', 'text_domain'),
+            'name'                  => _x('Events', 'Event General Name', 'text_domain'),
+            'singular_name'         => _x('Event', 'Event Singular Name', 'text_domain'),
+            'menu_name'             => __('Events', 'text_domain'),
+            'name_admin_bar'        => __('Event', 'text_domain'),
             'archives'              => __('Item Archives', 'text_domain'),
             'attributes'            => __('Item Attributes', 'text_domain'),
             'parent_item_colon'     => __('Parent Item:', 'text_domain'),
@@ -35,8 +35,8 @@ class cpt_settings {
             'filter_items_list'     => __('Filter items list', 'text_domain'),
         );
         $args = array(
-            'label'                 => __('Product', 'text_domain'),
-            'description'           => __('Product Description', 'text_domain'),
+            'label'                 => __('Event', 'text_domain'),
+            'description'           => __('Event Description', 'text_domain'),
             'labels'                => $labels,
             'supports'              => ['title', 'thumbnail', 'editor'],
             'hierarchical'          => false,
@@ -44,6 +44,7 @@ class cpt_settings {
             'show_ui'               => true,
             'show_in_menu'          => true,
             'menu_position'         => 5,
+            'menu_icon'             => 'dashicons-calendar',
             'show_in_admin_bar'     => true,
             'show_in_nav_menus'     => true,
             'can_export'            => true,
@@ -52,10 +53,8 @@ class cpt_settings {
             'publicly_queryable'    => true,
             'capability_type'       => 'page',
             'show_in_rest' => true,
-            // 'template' => array(
-            //     array('acf/product-hero'),
-            // ),
+            'supports' => array('title', 'editor', 'thumbnail')
         );
-        register_post_type('product', $args);
+        register_post_type('event', $args);
     }
 }

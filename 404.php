@@ -1,9 +1,13 @@
 <?php get_header(); ?>
-<section class="block 404">
+<section class="layout basic-content content-center">
     <div class="wrapper">
         <div class="row">
             <div class="col">
-                <h1>404 Page</h1>
+                <div class="content">
+                    <h1>404</h1>
+                    <p>Return to the home page.</p>
+                    <a href="<?php echo get_site_url(); ?>" class="btn">Go back to home.</a>
+                </div>
             </div>
         </div>
     </div>

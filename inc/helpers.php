@@ -5,21 +5,6 @@
 // the core WordPress logic out of template files.
 //======================================================================
 
-function the_styles($id) {
-
-	$term_obj_list = get_the_terms($id, 'style');
-	$terms_string = join(', ', wp_list_pluck($term_obj_list, 'name'));
-
-	echo $terms_string;
-}
-
-function the_flavors($id) {
-	$term_obj_list = get_the_terms($id, 'flavor');
-	$terms_string = join(', ', wp_list_pluck($term_obj_list, 'name'));
-
-	echo $terms_string;
-}
-
 //======================================================================
 // CUSTOM EXCERPT
 //======================================================================
