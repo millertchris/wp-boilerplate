@@ -1,0 +1,22 @@
+{
+	"name": "acf/slider",
+	"title": "Slider",
+	"description": "A custom block.",
+	"category": "custom-blocks",
+	"icon": "block-default",
+	"keywords": ["slider"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "block.php"
+	},
+	"supports": {
+		"align": false
+	},
+	"example": {
+		"attributes": {
+			"data": {
+				"preview_image_help": "block.png"
+			}
+		}
+	}
+}

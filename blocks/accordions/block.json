@@ -1,0 +1,22 @@
+{
+	"name": "acf/accordions",
+	"title": "Accordions",
+	"description": "A custom block.",
+	"category": "custom-blocks",
+	"icon": "block-default",
+	"keywords": ["cards"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "block.php"
+	},
+	"supports": {
+		"align": false
+	},
+	"example": {
+		"attributes": {
+			"data": {
+				"preview_image_help": "block.png"
+			}
+		}
+	}
+}

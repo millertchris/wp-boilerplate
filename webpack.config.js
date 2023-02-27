@@ -6,7 +6,7 @@ var path = require("path");
 const jsPath = "./src/js";
 const cssPath = "./src/scss";
 const outputPath = "dist";
-const localDomain = "http://prolific.local";
+const localDomain = "http://wp-boilerplate.local";
 const entryPoints = {
 	// 'app' is the output name, people commonly use 'bundle'
 	// you can have more than 1 entry point
