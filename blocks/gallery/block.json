@@ -1,0 +1,22 @@
+{
+	"name": "acf/gallery",
+	"title": "Gallery",
+	"description": "A custom block.",
+	"category": "custom-blocks",
+	"icon": "block-default",
+	"keywords": ["gallery"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "block.php"
+	},
+	"supports": {
+		"align": false
+	},
+	"example": {
+		"attributes": {
+			"data": {
+				"preview_image_help": "block.png"
+			}
+		}
+	}
+}

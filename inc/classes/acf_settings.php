@@ -5,29 +5,22 @@ class acf_settings {
     // CREATE BLOCK TYPES
     //======================================================================
     static function block_types() {
-
         // Check function exists.
         if (function_exists('acf_register_block_type')) {
-            acf_register_block_type(array(
-                'name'              => 'hero',
-                'title'             => __('Hero'),
-                'description'       => __('A custom block.'),
-                'render_template'   => 'blocks/hero.php',
-                'category'          => 'custom-blocks',
-                'icon'              => 'block-default',
-                'keywords'          => array('hero'),
-                'supports' => array(
-                    'align' => false,
-                ),
-                'example'  => array(
-                    'attributes' => array(
-                        'mode' => 'preview',
-                        'data' => array(
-                            'preview_image_help' => get_stylesheet_directory_uri() . '/blocks/previews/hero.png',
-                        )
-                    )
-                )
-            ));
+            register_block_type(get_template_directory() . '/blocks/_example_block');
+            register_block_type(get_template_directory() . '/blocks/accordions');
+            register_block_type(get_template_directory() . '/blocks/basic_content');
+            register_block_type(get_template_directory() . '/blocks/cards');
+            register_block_type(get_template_directory() . '/blocks/carousel');
+            register_block_type(get_template_directory() . '/blocks/cta');
+            register_block_type(get_template_directory() . '/blocks/features');
+            register_block_type(get_template_directory() . '/blocks/gallery');
+            register_block_type(get_template_directory() . '/blocks/hero_1');
+            register_block_type(get_template_directory() . '/blocks/listing');
+            register_block_type(get_template_directory() . '/blocks/slider');
+            register_block_type(get_template_directory() . '/blocks/stats');
+            register_block_type(get_template_directory() . '/blocks/testimonials');
+            register_block_type(get_template_directory() . '/blocks/web_form');
         }
     }
 

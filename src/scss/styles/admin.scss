@@ -12,7 +12,6 @@ html {
 	@import "../partials/base";
 	@import "../blocks/base";
 	@import "../components/base";
-	@import "../../../node_modules/flickity/dist/flickity.min.css";
 	@include base-font-styles(true);
 	background-color: var(--body-color);
 
